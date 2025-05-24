@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Abhijith U - Digital Card</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="overlay" id="overlay"></div>
+
+  <div class="popup" id="qrPopup">
+    <h2>Scan this QR code</h2>
+    <img src="co.jpg" alt="Abhijith U" class="avatar" />
+    <p><button onclick="closePopup()">Close</button></p>
+  </div>
+
+  <div class="card" id="card">
+    <img src="pro.jpeg" alt="Abhijith U" class="proF" />
+    <h1>ABHIJITH U</h1>
+    <p class="title">Administrator</p>
+    <div class="company">Salem Jaber Alhassan and Sons</div>
+
+    <div class="icons">
+      <a href="tel:+97455719844" aria-label="Call">
+        <img src="te.svg" alt="Phone" width="28" height="28" />
+      </a>
+      <a href="mailto:abhiocrdoha@gmail.com" aria-label="Email">
+        <img src="gm.svg" alt="Email" width="28" height="28" />
+      </a>
+      <a href="https://wa.me/97455719844" aria-label="WhatsApp">
+        <img src="wh.svg" alt="WhatsApp" width="28" height="28" />
+      </a>
+      <a href="contact.vcf" download class="contact-save-button" title="Save Contact">💾</a>
+    </div>
+
+    <div class="section2">
+      <h2>About Me</h2>
+      <p>The best way to predict the future is to create it.</p>
+    </div>
+
+    <div class="section">
+      <h2>Save Contact</h2>
+    </div>
+
+    <!-- Contact Info Popup -->
+    <div class="popup" id="contactPopup">
+      <h2>Contact Information</h2>
+      <p><strong>Name:</strong> Abhijith U</p>
+      <p><strong>Email:</strong> <a href="mailto:abhiocrdoha@gmail.com">abhiocrdoha@gmail.com</a></p>
+      <p><strong>Mobile:</strong> <a href="tel:+97455719844">+974 5571 9844</a></p>
+      <p><strong>Landline:</strong> +974 4444 1234</p>
+      <p><strong>Address:</strong> Salem Jaber Al Hassan and Sons, Doha, Qatar</p>
+      <p><a href="https://www.google.com/maps/place/Salem+Jaber+Al+Hassan+And+Sons/@25.2690489,51.5249578,17z" target="_blank" rel="noopener noreferrer">View on Google Maps</a></p>
+      <p><button onclick="closeContactPopup()">Close</button></p>
+    </div>
+    <!-- End Contact Info Popup -->
+
+    <div class="section2">
+      <h2>Connect With Me On</h2>
+      <div class="icons">
+        <a href="https://www.facebook.com/yourprofile" target="_blank" rel="noopener noreferrer" aria-label="Facebook">
+          <img src="fac.svg" alt="Facebook" width="28" height="28" />
+        </a>
+        <a href="https://www.instagram.com/yourprofile" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
+          <img src="instagram.svg" alt="Instagram" width="28" height="28" />
+        </a>
+        <a href="https://www.lin.com/in/yourprofile" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
+          <img src="lin.svg" alt="LinkedIn" width="28" height="28" />
+        </a>
+        <a href="https://twi.com/yourprofile" target="_blank" rel="noopener noreferrer" aria-label="Twitter">
+          <img src="twi.svg" alt="Twitter" width="28" height="28" />
+        </a>
+        <a href="javascript:void(0);" onclick="showContactPopup()" aria-label="Contact Info">
+          <img src="adr.svg" alt="Contact Info" width="28" height="28" />
+        </a>
+      </div>
+    </div>
+
+      <!-- Map Embed -->
+  <section class="p-6 border-t border-gray-700">
+    <h2 class="text-xl font-semibold mb-4">Our Location</h2>
+    <div class="w-full h-64 rounded overflow-hidden">
+      <iframe
+        class="w-full h-full"
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3607.5708123910715!2d51.5249578!3d25.2690489!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3e45c51159cec585%3A0xaacadb767c1b230c!2sSalem%20Jaber%20Al%20Hassan%20And%20Sons!5e0!3m2!1sen!2sqa!4v1715585692094!5m2!1sen!2sqa"
+        allowfullscreen=""
+        loading="lazy"
+        referrerpolicy="no-referrer-when-downgrade">
+      </iframe>
+    </div>
+  </section>
+
+    <div class="footer">
+      <a href="#">Get your own Smart Business Card</a>
+    </div>
+
+    <div class="download-button" onclick="downloadCard()">⬇️</div>
+    <div class="qr-button" onclick="showPopup()">🔳</div>
+    <button class="native-share-button" onclick="shareThisPage()">➥</button>
+  </div>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
