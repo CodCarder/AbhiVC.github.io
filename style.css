@@ -160,7 +160,11 @@ h1 {
   margin-top: 10px;
 }
 
-.contact-save-button {
+.contact-save-button  {
+    margin: 20px 0;
+}
+
+.contact-save-button a {
       position: absolute;
       bottom:472px;
       left: 290px;
@@ -177,14 +181,7 @@ h1 {
       box-shadow: 0 0 10px rgba(245, 198, 10, 0.5);
     }
 
-    @media (max-width: 500px) {
-      .contact-save-button {
-        width: 36px;
-        height: 36px;
-        font-size: 1em;
-      }
-    }
-
+    
 .overlay {
   display: none;
   position: fixed;
