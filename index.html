@@ -105,7 +105,56 @@
     <button class="native-share-button" onclick="shareThisPage()">➥</button>
   </div>
 
+    <script>
+    function showPopup() {
+      document.getElementById('qrPopup').style.display = 'block';
+      document.getElementById('overlay').style.display = 'block';
+    }
+
+
+
+    <!-- address pop up -->
+
+     function showContactPopup() {
+    document.getElementById('contactPopup').style.display = 'block';
+    document.getElementById('overlay').style.display = 'block';
+  }
+
+  function closeContactPopup() {
+    document.getElementById('contactPopup').style.display = 'none';
+    document.getElementById('overlay').style.display = 'none';
+  }
+
+
+
+    function closePopup() {
+      document.getElementById('qrPopup').style.display = 'none';
+      document.getElementById('overlay').style.display = 'none';
+    }
+
+    function downloadCard() {
+      const link = document.createElement('a');
+      link.href = 'vcard.png';
+      link.download = 'vcard.png';
+      document.body.appendChild(link);
+      link.click();
+      document.body.removeChild(link);
+    }
+
+    function shareThisPage() {
+      if (navigator.share) {
+        navigator.share({
+          title: document.title,
+          text: "Check out this digital card!",
+          url: window.location.href
+        })
+        .then(() => console.log('Successful share'))
+        .catch((error) => console.error('Error sharing:', error));
+      } else {
+        alert("Sharing not supported on this device/browser.");
+      }
+    }
+  </script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
-  <script src="script.js"></script>
 </body>
 </html>
