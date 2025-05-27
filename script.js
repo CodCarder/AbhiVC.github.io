@@ -31,17 +31,15 @@ function closeContactPopup() {
 }
 
 // Download the card as image using html2canvas
-function downloadCard() {
-  const card = document.getElementById("card");
-  html2canvas(card).then(canvas => {
-    const link = document.createElement('a');
-    link.href = canvas.toDataURL("image/png");
-    link.download = 'vcard.png';
-    document.body.appendChild(link);
-    link.click();
-    document.body.removeChild(link);
-  });
-}
+  function downloadCard() {
+      const link = document.createElement('a');
+      link.href = 'vcard.png';
+      link.download = 'vcard.png';
+      document.body.appendChild(link);
+      link.click();
+      document.body.removeChild(link);
+    }
+
 
 
 // Share this page using Web Share API if supported
